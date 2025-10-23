@@ -1,12 +1,101 @@
-# React + Vite
+# Expense Tracker Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://expense-tracker-5-uaeq.onrender.com)  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)  
+- [Key Features](#key-features)  
+- [Installation](#installation)  
+- [Connecting to Backend](#connecting-to-backend)  
+- [Running the Project](#running-the-project)  
+- [Build & Deployment](#build--deployment)  
+- [License](#license)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Overview
+
+This is the **frontend** for the Expense Tracker application, built with **React**, **Vite**, and **Tailwind CSS**. It provides a responsive and interactive interface for managing expenses and incomes, and it communicates with the backend via RESTful API endpoints.
+
+---
+
+## Key Features
+
+- **Responsive UI** with Tailwind CSS  
+- **Expense and Income Management**  
+- **Dashboard visualization** of financial data  
+- **Integration with backend API** for CRUD operations  
+- **File upload support** for receipts  
+- **Clean and modular component structure**  
+
+
+## Project Structure
+
+```text
+frontend/
+├── expense-tracker/
+│   ├── public/                     
+│   │   └── index.html
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── images/            # All images
+│   │   ├── components/
+│   │   │   ├── chart/             # Custom chart components
+│   │   │   │   ├── CustomBar.jsx
+│   │   │   │   ├── CustomLegend.jsx
+│   │   │   │   ├── CustomLine.jsx
+│   │   │   │   ├── CustomPie.jsx
+│   │   │   │   └── CustomTooltip.jsx
+│   │   │   ├── cards/             # Info and transaction cards
+│   │   │   │   ├── InfoCard.jsx
+│   │   │   │   └── TransactionInfoCard.jsx
+│   │   │   ├── dashboard/         # Dashboard-specific components
+│   │   │   │   ├── ExpenseTransactions.jsx
+│   │   │   │   ├── FinancialOverview.jsx
+│   │   │   │   ├── Last30DaysExpenses.jsx
+│   │   │   │   ├── RecentIncome.jsx
+│   │   │   │   ├── RecentTransaction.jsx
+│   │   │   │   └── RecentIncomeWithChart.jsx
+│   │   │   ├── expense/           # Expense-related components
+│   │   │   │   ├── AddExpense.jsx
+│   │   │   │   ├── ExpenseList.jsx
+│   │   │   │   └── ExpenseOverview.jsx
+│   │   │   ├── income/            # Income-related components
+│   │   │   │   ├── AddIncome.jsx
+│   │   │   │   ├── IncomeList.jsx
+│   │   │   │   └── IncomeOverview.jsx
+│   │   │   ├── input/             # Input components
+│   │   │   │   ├── EmojiPicker.jsx
+│   │   │   │   └── InputAvatar.jsx
+│   │   │   └── layout/            # Layout components
+│   │   │       ├── AuthLayout.jsx
+│   │   │       ├── DashboardLayout.jsx
+│   │   │       ├── Navbar.jsx
+│   │   │       └── SideMenu.jsx
+│   │   ├── context/
+│   │   │   └── UserContext.jsx
+│   │   ├── hooks/
+│   │   │   └── useUserAuth.jsx
+│   │   ├── pages/
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx
+│   │   │   │   └── Signup.jsx
+│   │   │   └── dashboard/
+│   │   │       ├── Home.jsx
+│   │   │       ├── Expense.jsx
+│   │   │       └── Income.jsx
+│   │   ├── utils/
+│   │   │   ├── apiPaths.js
+│   │   │   ├── axiosInstance.js
+│   │   │   ├── data.js
+│   │   │   └── helper.js
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── index.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
