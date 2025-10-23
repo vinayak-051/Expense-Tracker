@@ -32,38 +32,39 @@ This is the **backend** for the Expense Tracker application built with **Node.js
 - **Dashboard aggregation** for quick summaries  
 - **File upload support** for receipts or documents  
 - **MongoDB integration** for persistent storage  
-- **Modular and scalable architecture**  
 - **Secure password hashing** with bcrypt  
-- **Role-based access (optional)**  
+- **Modular and scalable architecture**  
 
 ---
 
 ## Project Structure
+
+```text
 backend/
 ├── config/
-│ └── db.js # Database connection configuration
+│   └── db.js
 ├── controllers/
-│ ├── authController.js # Handles authentication logic
-│ ├── dashboardController.js # Handles dashboard-related requests
-│ ├── expenseController.js # Handles expense CRUD operations
-│ ├── incomeController.js # Handles income CRUD operations
+│   ├── authController.js
+│   ├── dashboardController.js
+│   ├── expenseController.js
+│   ├── incomeController.js
 ├── middleware/
-│ ├── auth.js # JWT authentication middleware
-│ ├── upload.js # File upload middleware
+│   ├── auth.js
+│   ├── upload.js
 ├── models/
-│ ├── Expense.js # Expense model
-│ ├── Income.js # Income model
-│ ├── User.js # User model
+│   ├── Expense.js
+│   ├── Income.js
+│   ├── User.js
 ├── routes/
-│ ├── authRoutes.js # Routes for authentication
-│ ├── dashboardRoutes.js # Routes for dashboard
-│ ├── expenseRoutes.js # Routes for expense
-│ ├── incomeRoutes.js # Routes for income
-├── uploads/ # Folder for uploaded files (e.g., receipts)
-├── node_modules/ # Node.js dependencies
-├── package.json # Project dependencies and scripts
-├── package-lock.json # Exact dependency versions
-└── server.js # Entry point of the server
+│   ├── authRoutes.js
+│   ├── dashboardRoutes.js
+│   ├── expenseRoutes.js
+│   ├── incomeRoutes.js
+├── uploads/
+├── node_modules/
+├── package.json
+├── package-lock.json
+└── server.js
 
 ---
 
@@ -90,6 +91,7 @@ backend/
 
 ```bash
 git clone https://github.com/vinayak-051/Expense-Tracker.git
+
 
 
 
